@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+<div>
+    <form action="" method="post">
+        <h1>ログイン</h1>
+        <p><label>
+            ID
+            <input type="text" name="id" autofocus>
+        </label></p>
+        <p><label>
+            パスワード
+            <input type="password" name="password">
+        </label></p>
+
+        #if($isFail)
+            <p>IDまたはパスワードが間違っています。再度入力してください。</p>
+        #end
+
+        <button type="submit">ログイン</button>
+    </form>
+</div>
+</body>
+</html>
