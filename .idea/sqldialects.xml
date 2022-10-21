@@ -3,5 +3,6 @@
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/src/main/java/info/creidea/database/migration/PasswordMigration.java" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/main/java/info/creidea/database/migration/StudentMigration.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/info/creidea/database/query/Authenticator.java" dialect="GenericSQL" />
   </component>
 </project>

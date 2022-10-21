@@ -9,7 +9,9 @@ public class PasswordMigration implements Migration {
         final var statement = connection.createStatement();
         statement.execute("""
         CREATE TABLE IF NOT EXISTS passwords (
-            number VARCHAR(255) NOT NULL PRIMARY KEY
+            student_number VARCHAR(255) NOT NULL PRIMARY KEY ,
+            password VARCHAR(255) NOT NULL,
+            FOREIGN KEY fk_student_number(student_number) REFERENCES students(number)
         );
         """);
     }

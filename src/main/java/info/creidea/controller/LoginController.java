@@ -1,5 +1,7 @@
 package info.creidea.controller;
 
+import info.creidea.domain.AuthUser;
+import info.creidea.repository.Authenticable;
 import spark.ModelAndView;
 import spark.TemplateEngine;
 import spark.TemplateViewRoute;
@@ -16,14 +18,21 @@ public class LoginController {
         });
     }
 
+    private Authenticable authenticator;
+    public LoginController(Authenticable authenticator) {
+        this.authenticator = authenticator;
+    }
+
     public TemplateViewRoute index = (req, res) -> view(false);
 
     public TemplateViewRoute login = (req, res) -> {
         final var id = Optional.ofNullable(req.queryParams("id")).orElseThrow();
         final var pass = Optional.ofNullable(req.queryParams("password")).orElseThrow();
 
-        if (!(id.equals("test") && pass.equals("pas"))) return view(true);
+        if (!(authenticator.認証(id, pass))) return view(true);
 
+        req.session(true);
+        req.session().attribute("user", new AuthUser(id));
         res.redirect("/");
         return null;
     };
