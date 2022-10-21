@@ -1,5 +1,6 @@
 package info.creidea;
 
+import info.creidea.client.SubjectsFetcher;
 import info.creidea.controller.AbsenceViewController;
 import info.creidea.controller.LoginController;
 import info.creidea.database.DatabaseFactory;
@@ -18,7 +19,7 @@ public class Main {
 
         final var templateEngine = new VelocityTemplateEngine();
         final var login = new LoginController(authenticator);
-        final var absence = new AbsenceViewController();
+        final var absence = new AbsenceViewController(new SubjectsFetcher());
 
         login.boot(templateEngine);
         absence.boot(templateEngine);

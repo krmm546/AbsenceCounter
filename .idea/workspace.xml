@@ -4,19 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1979669c-fe5e-4cdc-bd03-34bb5b42a9e1" name="Changes" comment="データベースの値を元にログインを行うよう変更">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/info/creidea/database/query/Authenticator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/info/creidea/domain/AuthUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/info/creidea/repository/Authenticable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="1979669c-fe5e-4cdc-bd03-34bb5b42a9e1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/info/creidea/client/SubjectsFetchAble.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/info/creidea/client/SubjectsFetcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/info/creidea/client/http/HTTPFetcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/info/creidea/client/parse/HTMLParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/info/creidea/domain/SubjectInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/info/creidea/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/creidea/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/info/creidea/controller/AbsenceViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/creidea/controller/AbsenceViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/info/creidea/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/creidea/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/info/creidea/database/migration/PasswordMigration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/creidea/database/migration/PasswordMigration.java" afterDir="false" />
     </list>
-    <list id="529a85b1-311f-40af-8084-4c2453987e01" name="Changes by tanakayouichi" comment="Migrationの実行" />
+    <list id="529a85b1-311f-40af-8084-4c2453987e01" name="Changes by tanakayouichi" comment="Migrationの実行">
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +32,7 @@
       <list>
         <option value="HTML File" />
         <option value="Interface" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -48,22 +49,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="info.creidea.Main" />
@@ -115,7 +116,9 @@
       <option name="presentableId" value="Default" />
       <updated>1666314250134</updated>
       <workItem from="1666314251615" duration="897000" />
-      <workItem from="1666315156002" duration="7816000" />
+      <workItem from="1666315156002" duration="10898000" />
+      <workItem from="1666327374269" duration="23000" />
+      <workItem from="1666327398768" duration="792000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1666315076134</created>
@@ -152,7 +155,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666321899154</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="データベースの値を元にログインを行うよう変更">
+      <created>1666323356328</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666323356328</updated>
+    </task>
+    <task id="LOCAL-00007" summary="データベースの値を元にログインを行うよう変更">
+      <created>1666324057517</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1666324057517</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
