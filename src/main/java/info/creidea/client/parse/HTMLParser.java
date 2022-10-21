@@ -7,6 +7,10 @@ import java.util.List;
 import java.util.Optional;
 
 public class HTMLParser {
+    /**
+     * 奈良高専のシラバスを解析する
+     * @param html 奈良高専のシラバスWebページのHTML
+     */
     public List<SubjectInfo> parse(String html) {
         final var document = Jsoup.parse(html);
         final var infos = new ArrayList<SubjectInfo>();

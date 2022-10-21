@@ -7,6 +7,9 @@ import java.util.Map;
 
 public record PersonalSubjectsContent(List<PersonalSubject> subjects) {
 
+    /**
+     * 個人科目データから、VIEWに出力すモデルを返す
+     */
     public Map<String, Object> model() {
         final var personals = subjects.stream()
                 .map(subject -> new HashMap<String, Object>() {{

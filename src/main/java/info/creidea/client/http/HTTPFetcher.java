@@ -7,6 +7,11 @@ import java.net.http.HttpResponse;
 import java.util.Optional;
 
 public class HTTPFetcher {
+    /**
+     * 指定されたURLのHTMLを取得する
+     * @param url URL
+     * @return HTML
+     */
     public Optional<String> fetch(String url) {
         final var client = HttpClient.newHttpClient();
         URI uri = URI.create(url);
