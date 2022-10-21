@@ -5,6 +5,7 @@ import info.creidea.controller.AbsenceViewController;
 import info.creidea.controller.LoginController;
 import info.creidea.database.DatabaseFactory;
 import info.creidea.database.migration.AllMigration;
+import info.creidea.database.query.AbsenceFetcher;
 import info.creidea.database.query.Authenticator;
 import spark.template.velocity.VelocityTemplateEngine;
 
@@ -19,7 +20,7 @@ public class Main {
 
         final var templateEngine = new VelocityTemplateEngine();
         final var login = new LoginController(authenticator);
-        final var absence = new AbsenceViewController(new SubjectsFetcher());
+        final var absence = new AbsenceViewController(new SubjectsFetcher(), new AbsenceFetcher(connection));
 
         login.boot(templateEngine);
         absence.boot(templateEngine);

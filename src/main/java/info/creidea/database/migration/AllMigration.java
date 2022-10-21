@@ -7,9 +7,10 @@ import java.util.Arrays;
 
 public class AllMigration implements Migration {
 
-    private static ArrayList<Migration> MIGRATIONS = new ArrayList<>(Arrays.asList(
+    private static final ArrayList<Migration> MIGRATIONS = new ArrayList<>(Arrays.asList(
             new StudentMigration(),
-            new PasswordMigration()
+            new PasswordMigration(),
+            new AbsenceMigration()
     ));
 
     @Override

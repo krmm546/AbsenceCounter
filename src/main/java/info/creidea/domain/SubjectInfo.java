@@ -22,4 +22,12 @@ public record SubjectInfo(String 区分, String 科目名, String 番号, int �
     public String 科目名() {
         return 科目名;
     }
+
+    public String 科目ID() {
+        return "20220-28-15-" + 番号;
+    }
+
+    public int 最大欠課時数() {
+        return (前期単位数 + 後期単位数) * 5;
+    }
 }

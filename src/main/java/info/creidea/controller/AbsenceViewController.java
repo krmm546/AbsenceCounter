@@ -2,19 +2,20 @@ package info.creidea.controller;
 
 import info.creidea.client.SubjectsFetchAble;
 import info.creidea.domain.AuthUser;
-import info.creidea.domain.SubjectInfo;
+import info.creidea.presentation.PersonalSubjectsContent;
+import info.creidea.repository.AbsenceFetchAble;
 import spark.ModelAndView;
 import spark.TemplateEngine;
 import spark.TemplateViewRoute;
 import static spark.Spark.*;
 
-import java.util.HashMap;
-
 public class AbsenceViewController {
     private SubjectsFetchAble subjectsFetcher;
+    private AbsenceFetchAble absenceFetcher;
 
-    public AbsenceViewController(SubjectsFetchAble subjectsFetcher) {
+    public AbsenceViewController(SubjectsFetchAble subjectsFetcher, AbsenceFetchAble absenceFetcher) {
         this.subjectsFetcher = subjectsFetcher;
+        this.absenceFetcher = absenceFetcher;
     }
 
     public void boot(TemplateEngine engine) {
@@ -24,14 +25,12 @@ public class AbsenceViewController {
     }
 
     public TemplateViewRoute index = (req, res) -> {
-        final AuthUser attribute = req.session().attribute("user");
+//        final AuthUser user = req.session().attribute("user");
+        final var user = new AuthUser("10550");
         final var subjects = subjectsFetcher.fetch(4, 2);
-         final var model = new HashMap<String, Object>();
-         model.put("subjects", subjects
-                 .stream()
-                 .map(SubjectInfo::科目名)
-                 .toList()
-         );
-        return new ModelAndView(model, "absence.vm");
+        final var personals = absenceFetcher.fetch(subjects, user);
+        System.out.println(personals);
+        final var content = new PersonalSubjectsContent(personals);
+        return new ModelAndView(content.model(), "absence.vm");
     };
 }
