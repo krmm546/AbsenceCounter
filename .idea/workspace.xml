@@ -4,17 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1979669c-fe5e-4cdc-bd03-34bb5b42a9e1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/info/creidea/database/query/AbsenceRegister.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/info/creidea/repository/AbsenceRegisterAble.java" afterDir="false" />
+    <list default="true" id="1979669c-fe5e-4cdc-bd03-34bb5b42a9e1" name="Changes" comment="タイトルを日本語に統一">
+      <change afterPath="$PROJECT_DIR$/src/main/java/info/creidea/controller/RegisterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/info/creidea/database/SubjectAbsenceFetcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/info/creidea/presentation/PersonalSubjectContent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/info/creidea/repository/SubjectAbsenceFetchAble.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/register.vm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/info/creidea/client/http/HTTPFetcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/creidea/client/http/HTTPFetcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/info/creidea/client/parse/HTMLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/creidea/client/parse/HTMLParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/info/creidea/database/DatabaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/creidea/database/DatabaseFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/info/creidea/presentation/PersonalSubjectsContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/creidea/presentation/PersonalSubjectsContent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/info/creidea/repository/AbsenceFetchAble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/creidea/repository/AbsenceFetchAble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/info/creidea/repository/Authenticable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/creidea/repository/Authenticable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/info/creidea/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/creidea/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/info/creidea/client/SubjectsFetchAble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/creidea/client/SubjectsFetchAble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/info/creidea/client/SubjectsFetcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/creidea/client/SubjectsFetcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/info/creidea/domain/SubjectInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/creidea/domain/SubjectInfo.java" afterDir="false" />
     </list>
     <list id="529a85b1-311f-40af-8084-4c2453987e01" name="Changes by tanakayouichi" comment="Migrationの実行">
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
@@ -33,8 +34,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="Record" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -120,7 +121,7 @@
       <workItem from="1666314251615" duration="897000" />
       <workItem from="1666315156002" duration="10898000" />
       <workItem from="1666327374269" duration="23000" />
-      <workItem from="1666327398768" duration="8484000" />
+      <workItem from="1666327398768" duration="13859000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1666315076134</created>
@@ -192,11 +193,36 @@
       <option name="project" value="LOCAL" />
       <updated>1666337423834</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Javadocを追記">
+      <created>1666339816433</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1666339816433</updated>
+    </task>
+    <task id="LOCAL-00012" summary="タイトルを日本語に統一">
+      <created>1666340155241</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1666340155241</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
@@ -207,6 +233,8 @@
     <MESSAGE value="スクレイピングを実装" />
     <MESSAGE value="スクレイピングした科目を表示させた" />
     <MESSAGE value="データベースから記録を取ってくるように実装" />
-    <option name="LAST_COMMIT_MESSAGE" value="データベースから記録を取ってくるように実装" />
+    <MESSAGE value="Javadocを追記" />
+    <MESSAGE value="タイトルを日本語に統一" />
+    <option name="LAST_COMMIT_MESSAGE" value="タイトルを日本語に統一" />
   </component>
 </project>

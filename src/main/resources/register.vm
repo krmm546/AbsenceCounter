@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>欠課時数登録</title>
+</head>
+<body>
+<div>
+    <h1>$name</h1>
+    <form action="" method="post">
+        <p><label>
+            <input type="date" name="date">
+        </label></p>
+
+        <p><label>
+            <span>欠課時数</span>
+            <input type="number" min="0" max="8" value="0" name="absence">
+        </label></p>
+
+        <p>$absence/$maxAbsence</p>
+
+        <p><label>
+            <span>遅刻</span>
+            <input type="checkbox" name="late">
+        </label></p>
+
+        <p>$late/3</p>
+
+        <button type="submit">登録</button>
+    </form>
+</div>
+
+</body>
+</html>

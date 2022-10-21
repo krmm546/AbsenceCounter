@@ -19,12 +19,16 @@ public record SubjectInfo(String 区分, String 科目名, String 番号, int �
         throw new IllegalArgumentException("不正な学期値: " + 学期);
     }
 
+    public boolean is科目ID(String 科目ID) {
+        return 科目ID().equals(科目ID);
+    }
+
     public String 科目名() {
         return 科目名;
     }
 
     public String 科目ID() {
-        return "20220-28-15-" + 番号;
+        return "2022-28-15-" + 番号;
     }
 
     public int 最大欠課時数() {
