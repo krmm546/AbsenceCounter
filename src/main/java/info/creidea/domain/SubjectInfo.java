@@ -18,4 +18,8 @@ public record SubjectInfo(String 区分, String 科目名, String 番号, int �
         if (学期 == 2) return this.後期単位数 > 0;
         throw new IllegalArgumentException("不正な学期値: " + 学期);
     }
+
+    public String 科目名() {
+        return 科目名;
+    }
 }

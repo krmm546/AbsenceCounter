@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1979669c-fe5e-4cdc-bd03-34bb5b42a9e1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/info/creidea/client/SubjectsFetchAble.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/info/creidea/client/SubjectsFetcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/info/creidea/client/http/HTTPFetcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/info/creidea/client/parse/HTMLParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/info/creidea/domain/SubjectInfo.java" afterDir="false" />
+    <list default="true" id="1979669c-fe5e-4cdc-bd03-34bb5b42a9e1" name="Changes" comment="スクレイピングを実装">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/info/creidea/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/creidea/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/info/creidea/controller/AbsenceViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/creidea/controller/AbsenceViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/info/creidea/domain/SubjectInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/creidea/domain/SubjectInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/absence.vm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/absence.vm" afterDir="false" />
     </list>
     <list id="529a85b1-311f-40af-8084-4c2453987e01" name="Changes by tanakayouichi" comment="Migrationの実行">
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
@@ -118,7 +114,7 @@
       <workItem from="1666314251615" duration="897000" />
       <workItem from="1666315156002" duration="10898000" />
       <workItem from="1666327374269" duration="23000" />
-      <workItem from="1666327398768" duration="792000" />
+      <workItem from="1666327398768" duration="2334000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1666315076134</created>
@@ -169,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666324057517</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="スクレイピングを実装">
+      <created>1666328341294</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1666328341294</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +184,7 @@
     <MESSAGE value="ログインに必要なMigrationを実装" />
     <MESSAGE value="Migrationの実行" />
     <MESSAGE value="データベースの値を元にログインを行うよう変更" />
-    <option name="LAST_COMMIT_MESSAGE" value="データベースの値を元にログインを行うよう変更" />
+    <MESSAGE value="スクレイピングを実装" />
+    <option name="LAST_COMMIT_MESSAGE" value="スクレイピングを実装" />
   </component>
 </project>

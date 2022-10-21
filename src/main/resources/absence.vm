@@ -8,6 +8,18 @@
     <title>欠課時数確認</title>
 </head>
 <body>
-Hello
+<div>
+    <div>
+        <span>教科</span>　<span>欠課時数</span> <span>遅刻</span>
+
+    </div>
+    <div>
+        #foreach($subject in $subjects)
+            <div>
+                <span>$subject</span> <span>18/20</span> <span>2/3</span>
+            </div>
+        #end
+    </div>
+</div>
 </body>
 </html>
