@@ -16,7 +16,7 @@
     <div>
         #foreach($subject in $subjects)
             <div>
-                <span>$subject.name</span> <span>$subject.absence/$subject.maxAbsence</span> <span>$subject.late/3</span>
+                <a href="/register/$subject.id">$subject.name</a> <span>$subject.absence/$subject.maxAbsence</span> <span>$subject.late/3</span>
             </div>
         #end
     </div>
