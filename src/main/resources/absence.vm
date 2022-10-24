@@ -5,21 +5,47 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="static/reset.css">
+    <link rel="stylesheet" href="static/absence.css">
     <title>欠課時数確認</title>
 </head>
 <body>
-<div>
-    <div>
-        <span>教科</span>　<span>欠課時数</span> <span>遅刻</span>
-
+<div id="app">
+    <div class="title">
+        <span class="subject">教科</span>
+        <span class="absence">欠課</span>
+        <span class="late">遅刻</span>
     </div>
-    <div>
-        #foreach($subject in $subjects)
-            <div>
-                <a href="/register/$subject.id">$subject.name</a> <span>$subject.absence/$subject.maxAbsence</span> <span>$subject.late/3</span>
-            </div>
-        #end
+    <div class="subjects">
+        <button
+                class="subject"
+                v-for="subject in subjects"
+                :key="subject.id"
+                :style="subject.colorStyle"
+                @click="subject.transform"
+        >
+            <span :class="subject.titleClasses">{{ subject.name }}</span>
+            <span class="absence">{{ subject.displayAbsence }}</span>
+            <span class="late">{{ subject.displayLate }}</span>
+        </button>
     </div>
 </div>
+<script src="static/scripts/subject.js"></script>
+<script type="module">
+    const subjects = [
+    #foreach($subject in $subjects)
+        new Subject("$subject.id", "$subject.name", $subject.absence, $subject.maxAbsence, $subject.late),
+    #end
+    ];
+    const Absence = {
+        data() {
+            return {
+                subjects,
+            }
+        }
+    };
+    Vue.createApp(Absence).mount('#app');
+</script>
 </body>
 </html>

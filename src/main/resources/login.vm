@@ -1,24 +1,32 @@
-<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <title>ログイン</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="static/reset.css">
+    <link rel="stylesheet" href="static/login.css">
 </head>
 <body>
-<div>
-    <form action="" method="post">
+<div class="app">
+    <form action="" method="post" class="guest">
+        <input type="hidden" name="id" value="guest">
+        <input type="hidden" name="password" value="password">
+        <button type="submit">ゲストログイン</button>
+    </form>
+    <form class="form" action="" method="post">
         <h1>ログイン</h1>
-        <p><label>
-            ID
-            <input type="text" name="id" autofocus>
-        </label></p>
-        <p><label>
-            パスワード
-            <input type="password" name="password">
-        </label></p>
+        <div class="id"><label >
+            <span class="input-title">ID</span>
+            <span class="input"><input type="text" name="id" autofocus></span>
+        </label></div>
+        <div class="password"><label>
+            <span class="input-title">パスワード</span>
+            <span class="input"><input type="password" name="password"></span>
+        </label></div>
 
         #if($isFail)
-            <p>IDまたはパスワードが間違っています。再度入力してください。</p>
+            <p class="error">IDまたはパスワードが間違っています。再度入力してください。</p>
         #end
 
         <button type="submit">ログイン</button>

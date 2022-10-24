@@ -5,33 +5,65 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="../static/reset.css">
+    <link rel="stylesheet" href="../static/register.css">
     <title>欠課時数登録</title>
 </head>
 <body>
-<div>
+<div id="app">
     <h1>$name</h1>
     <form action="" method="post">
-        <p><label>
-            <input type="date" name="date">
+        <p class="date"><label>
+            <input id="date" type="date" name="date" :value="today">
         </label></p>
 
-        <p><label>
-            <span>欠課時数</span>
-            <input type="number" min="0" max="8" value="0" name="absence">
+        <p class="absence"><label>
+            <span class="title">欠課時数</span>
+            <input type="number" min="0" max="8" name="absence" v-model="absence">
         </label></p>
 
-        <p>$absence/$maxAbsence</p>
+        <p class="data">{{ displayAbsence }}/{{ max }}</p>
 
-        <p><label>
+        <p class="late"><label>
             <span>遅刻</span>
-            <input type="checkbox" name="late">
+            <input :class="{ checked: isLate }" type="checkbox" name="late" v-model="isLate">
         </label></p>
 
-        <p>$late/3</p>
+        <p class="data">{{ displayLate }}/3</p>
 
         <button type="submit">登録</button>
     </form>
 </div>
-
+<script src="../static/scripts/subject.js"></script>
+<script type="module">
+    const today = new Date();
+    const todayString = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
+    const absence = $absence;
+    const maxAbsence = $maxAbsence;
+    const late = $late;
+    const Absence = {
+        data() {
+            return {
+                absence: 2,
+                isLate: false,
+                today: todayString,
+                max: maxAbsence,
+            }
+        },
+        computed: {
+            displayAbsence() {
+                return absence + this.absence + Math.floor(this.sumLate / 3);
+            },
+            displayLate() {
+                return this.sumLate % 3;
+            },
+            sumLate() {
+                return late + (this.isLate ? 1 : 0);
+            }
+        }
+    };
+    Vue.createApp(Absence).mount('#app');
+</script>
 </body>
 </html>
