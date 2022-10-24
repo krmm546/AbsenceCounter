@@ -1,0 +1,12 @@
+.form {
+  height: 1000px;
+  $horizontal: 180px;
+  padding: {
+    top: 200px;
+    left: $horizontal;
+    right: $horizontal;
+  }
+}
+.guest > button {
+  font-size: 20px;
+}

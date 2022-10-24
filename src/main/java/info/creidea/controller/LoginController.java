@@ -5,12 +5,14 @@ import info.creidea.repository.Authenticable;
 import spark.ModelAndView;
 import spark.TemplateEngine;
 import spark.TemplateViewRoute;
-import static spark.Spark.*;
 
 import java.util.HashMap;
 import java.util.Optional;
 
-public class LoginController {
+import static spark.Spark.*;
+
+public class LoginController implements Controller {
+    @Override
     public void boot(TemplateEngine engine) {
         path("/login", () -> {
             get("", index, engine);
@@ -30,6 +32,7 @@ public class LoginController {
         final var pass = Optional.ofNullable(req.queryParams("password")).orElseThrow();
 
         if (!(authenticator.認証(id, pass))) return view(true);
+
 
         req.session(true);
         req.session().attribute("user", new AuthUser(id));

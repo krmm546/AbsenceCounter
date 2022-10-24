@@ -1,0 +1,9 @@
+@import "absence/width300";
+
+@media screen and (min-width: 360px) {
+  @import "absence/width360";
+}
+
+@media screen and (min-width: 390px) {
+  @import "absence/width390";
+}

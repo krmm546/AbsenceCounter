@@ -1,0 +1,28 @@
+.form {
+  height: 800px;
+  $horizontal: 60px;
+  padding: {
+    top: 160px;
+    left: $horizontal;
+    right: $horizontal;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+  div > label {
+    .input-title {
+      font-size: 32px;
+    }
+    .input > input {
+      height: 47px;
+      font-size: 18px;
+    }
+  }
+  button {
+    font-size: 24px;
+    width: 130px;
+    height: 45px;
+    bottom: 100px;
+  }
+}

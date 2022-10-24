@@ -53,7 +53,6 @@ public record AbsenceFetcher(Connection connection) implements AbsenceFetchAble 
     private Map<String, 記録> convert(ResultSet result) throws SQLException {
         final var subjects = new HashMap<String, 記録>();
         while (result.next()) {
-            System.out.println(result);
             final var 科目ID = result.getString("subject_id");
             final var 欠課時数 = result.getInt("absence");
             final var 遅刻回数 = result.getInt("late");
@@ -63,6 +62,6 @@ public record AbsenceFetcher(Connection connection) implements AbsenceFetchAble 
     }
 
     private record 記録(int 欠課時数, int 遅刻回数) {
-        static 記録 DEFAULT = new 記録(0, 0);
+        static final 記録 DEFAULT = new 記録(0, 0);
     }
 }

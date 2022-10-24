@@ -1,0 +1,9 @@
+@import "register/width300";
+
+@media screen and (min-width: 360px) {
+  @import "register/width360";
+}
+
+@media screen and (min-width: 390px) {
+  @import "register/width390";
+}

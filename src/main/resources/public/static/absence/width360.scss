@@ -1,0 +1,66 @@
+@use "sass:math";
+
+#app {
+  $width: 300px;
+  $height: 70px;
+
+  &>.title {
+    font-size: 25px;
+    &>.subject {
+      left: 80px;
+    }
+    &>.absence {
+      right: 120px;
+    }
+    &>.late {
+      right: 40px;
+    }
+  }
+
+  &>.subjects {
+    &>.subject {
+      width: $width;
+      height: $height;
+
+      &>.title {
+        width: math.div($width ,  2) - 20;
+        height: $height;
+        line-height: math.div($height ,  2) - 5;
+
+        &.LL {
+          font-size: 40px;
+          line-height: $height;
+        }
+
+        &.L {
+          font-size: 30px;
+        }
+
+        &.M {
+          font-size: 28px;
+        }
+
+        &.S {
+          font-size: 25px;
+        }
+
+        &.SS {
+          font-size: 16px;
+        }
+      }
+
+      &>.absence {
+        width: math.div($width,  2) - 30;
+        height: $height;
+        font-size: 50px;
+        padding-top: 5px;
+      }
+
+      &>.late {
+        width: 40px;
+        height: $height;
+        font-size: 25px;
+      }
+    }
+  }
+}

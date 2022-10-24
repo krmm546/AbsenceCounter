@@ -1,0 +1,11 @@
+.form {
+  $horizon: 60px;
+  padding: {
+    top: 120px;
+    left: $horizon;
+    right: $horizon;
+  }
+  button {
+    bottom: 200px;
+  }
+}

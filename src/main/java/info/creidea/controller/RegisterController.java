@@ -11,7 +11,7 @@ import spark.TemplateViewRoute;
 
 import static spark.Spark.*;
 
-public class RegisterController {
+public class RegisterController implements Controller {
 
     private SubjectAbsenceFetchAble subjectAbsenceFetcher;
     private AbsenceRegisterAble absenceRegister;
@@ -21,6 +21,7 @@ public class RegisterController {
         this.absenceRegister = absenceRegister;
     }
 
+    @Override
     public void boot(TemplateEngine engine) {
         path("/register/:subjectID",() -> {
            get("",index, engine);
@@ -29,8 +30,7 @@ public class RegisterController {
     }
 
     public TemplateViewRoute index = (req, res) -> {
-//        final AuthUser user = req.session().attribute("user");
-        final AuthUser user = new AuthUser("10550");
+        final AuthUser user = req.session().attribute("user");
         final var 科目ID = req.params("subjectID");
         final var subject = subjectAbsenceFetcher.fetch(user, 科目ID);
         final var content = new PersonalSubjectContent(subject);
@@ -38,8 +38,7 @@ public class RegisterController {
     };
 
     public Route register = (req, res) -> {
-//        final AuthUser user = req.session().attribute("user");
-        final AuthUser user = new AuthUser("10550");
+        final AuthUser user = req.session().attribute("user");
         final var 科目ID = req.params("subjectID");
         final var date = req.queryParams("date");
         final var absence = Integer.parseInt(req.queryParams("absence"));

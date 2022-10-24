@@ -1,0 +1,156 @@
+$font: 'Inter', YuGothic, MS Gothic, Meiryo, serif;
+
+#app {
+
+  form {
+    display: flex;
+    flex-direction: column;
+    height: 1200px;
+    align-items: center;
+    width: 100%;
+  }
+
+  &>h1 {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 100%;
+    padding:{
+      left: 10%;
+      right: 10%;
+      top: 60px;
+    }
+    height: 140px;
+    text-align: center;
+    font-family: $font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+    color: black;
+  }
+
+  .date {
+    display: block;
+    height: 70px;
+
+    input {
+      width: 160px;
+      height: 30px;
+      font-size: 18px;
+      line-height: 30px;
+      text-align: center;
+      border: 2px solid black;
+      border-radius: 10px;
+    }
+  }
+
+  .absence {
+    label {
+      width: 100vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 30px;
+      align-items: center;
+
+      .title {
+        display: block;
+        height: 35px;
+        line-height: 35px;
+        font-family: $font;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        color: black;
+      }
+
+      input {
+        display: block;
+        width: 100px;
+        height: 28px;
+        background: white;
+        border: 2px solid black;
+        border-radius: 8px;
+        text-align: center;
+      }
+    }
+  }
+  .data {
+    display: block;
+    position: relative;
+
+    width: 120px;
+    height: 90px;
+
+    font-family: 'Impact';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 78px;
+    text-align: center;
+    color: black;
+  }
+
+  .late {
+    label {
+      width: 100vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 70px;
+      align-items: center;
+
+      span{
+        display: block;
+        height: 35px;
+        line-height: 35px;
+        font-family: $font;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        color: black;
+      }
+
+      input {
+        border: 2px solid #5a5a5a;
+        color: #1d1d1d;
+        cursor: pointer;
+        display: inline-block;
+        float: left;
+        height: 14px;
+        outline-color: #eaeaea;
+        padding: 0;
+        position:relative;
+        width: 14px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        z-index:1;
+        &.checked {
+          border-left: 2px solid green;
+          border-bottom: 4px solid green;
+          border-top: 1px solid rgba(0,0,0,0);
+          border-right: 1px solid rgba(0,0,0,0);
+          -webkit-transform: rotate(-45deg) scaleY(0.5);
+          -moz-transform: rotate(-45deg) scaleY(0.5);
+          -ms-transform: rotate(-45deg) scaleY(0.5);
+          -o-transform: rotate(-45deg) scaleY(0.5);
+          transform: rotate(-45deg) scaleY(0.5);
+        }
+      }
+    }
+  }
+  button {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    font-family: $font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 40px;
+    background: #789DFE;
+    border: 2px solid #000000;
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,108 @@
+$font: 'Inter', YuGothic, MS Gothic, Meiryo, serif;
+@use "sass:math";
+#app {
+  &>.title {
+    width: 100%;
+    height: 60px;
+    position: relative;
+
+    font-family: $font;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 39px;
+
+    padding-top: 20px;
+
+    &>.subject {
+      position: absolute;
+      left: 55px;
+    }
+
+    &>.absence {
+      position: absolute;
+      right: 90px;
+    }
+
+    &>.late {
+      position: absolute;
+      right: 28px;
+    }
+  }
+
+  $width: 220px;
+  $height: 60px;
+
+  &>.subjects {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &>.subject {
+      width: $width;
+      height: $height;
+      margin: 4px;
+
+      background: rgba(234, 74, 74, 0.8);
+      border: 2px solid #000000;
+      border-radius: 10px;
+
+      font-family: $font;
+      font-style: normal;
+      font-weight: bold;
+      line-height: $height;
+      color: black;
+
+      &>.title {
+        display: inline-block;
+        width: math.div($width, 2) - 20;
+        height: 55px;
+        vertical-align: top;
+        line-height: math.div($height, 2) - 5;
+        padding: {
+          left: 3px;
+          top: 1px;
+        }
+
+        &.LL {
+          font-size: 25px;
+          line-height: $height;
+        }
+
+        &.L {
+          font-size: 20px;
+        }
+
+        &.M {
+          font-size: 18px;
+        }
+
+        &.S {
+          font-size: 16px;
+        }
+
+        &.SS {
+          font-size: 11px;
+        }
+      }
+
+      &>.absence {
+        display: inline-block;
+        width: math.div($width, 2) - 20;
+        text-align: right;
+        height: $height;
+        font-family: Impact;
+        font-size: 36px;
+      }
+
+      &>.late {
+        display: inline-block;
+        width: 32px;
+        height: $height;
+        text-align: right;
+        font-family: Impact;
+        font-size: 20px;
+      }
+    }
+  }
+}

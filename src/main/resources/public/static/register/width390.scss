@@ -1,0 +1,10 @@
+#app {
+  &>h1 {
+    padding-top: 100px;
+    height: 180px;
+  }
+  .data {
+    margin-top: 20px;
+    height: 120px;
+  }
+}

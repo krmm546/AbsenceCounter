@@ -1,0 +1,15 @@
+#app {
+  &>.title {
+    height: 100px;
+    padding-top: 60px;
+    &>.subject {
+      left: 90px;
+    }
+    &>.absence {
+      right: 130px;
+    }
+    &>.late {
+      right: 50px;
+    }
+  }
+}

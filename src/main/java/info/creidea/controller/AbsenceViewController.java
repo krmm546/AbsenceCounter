@@ -7,9 +7,11 @@ import info.creidea.repository.AbsenceFetchAble;
 import spark.ModelAndView;
 import spark.TemplateEngine;
 import spark.TemplateViewRoute;
-import static spark.Spark.*;
 
-public class AbsenceViewController {
+import static spark.Spark.get;
+import static spark.Spark.path;
+
+public class AbsenceViewController implements Controller {
     private SubjectsFetchAble subjectsFetcher;
     private AbsenceFetchAble absenceFetcher;
 
@@ -18,6 +20,7 @@ public class AbsenceViewController {
         this.absenceFetcher = absenceFetcher;
     }
 
+    @Override
     public void boot(TemplateEngine engine) {
         path("/", () -> {
             get("", index, engine);
@@ -25,11 +28,9 @@ public class AbsenceViewController {
     }
 
     public TemplateViewRoute index = (req, res) -> {
-//        final AuthUser user = req.session().attribute("user");
-        final var user = new AuthUser("10550");
+        final AuthUser user = req.session().attribute("user");
         final var subjects = subjectsFetcher.fetch(4, 2);
         final var personals = absenceFetcher.fetch(subjects, user);
-        System.out.println(personals);
         final var content = new PersonalSubjectsContent(personals);
         return new ModelAndView(content.model(), "absence.vm");
     };

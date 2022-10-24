@@ -9,6 +9,7 @@ public class AllMigration implements Migration {
 
     private static final ArrayList<Migration> MIGRATIONS = new ArrayList<>(Arrays.asList(
             new StudentMigration(),
+            new AccessLogsMigration(),
             new PasswordMigration(),
             new AbsenceMigration()
     ));

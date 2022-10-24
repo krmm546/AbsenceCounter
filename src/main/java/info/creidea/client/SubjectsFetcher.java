@@ -27,7 +27,6 @@ public class SubjectsFetcher implements SubjectsFetchAble {
     private List<SubjectInfo> subjects() {
         if (subjects == null) {
             subjects = fetchFromWeb();
-            System.out.println(subjects);
         }
         return subjects;
     }

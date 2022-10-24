@@ -1,0 +1,95 @@
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  $horizontalPadding: 40px;
+  padding: {
+    top: 100px;
+    left: $horizontalPadding;
+    right: $horizontalPadding;
+  }
+  height: 600px;
+
+  h1 {
+    display: block;
+    width: 100vw;
+    text-align: center;
+    font-family: 'Inter', cursive;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 25px;
+    color: black;;
+  }
+
+  div {
+    &.id > label > .input-title {
+      font-style: italic;
+    }
+    margin-top: 20px;
+    width: 100%;
+    label {
+      .input-title {
+        text-align: center;
+        font-family: 'Inter', YuGothic, MS Gothic, Meiryo, serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        color: black;
+        margin-left: 10px;
+      }
+      .input {
+        input {
+          width: 100%;
+          height: 32px;
+          background: #CCFFFC;
+          border: 2px solid #47C8FF;
+          box-shadow: 0 5px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 5px;
+          font-size: 14px;
+          padding: {
+            left: 10px;
+          }
+        }
+      }
+    }
+  }
+  button {
+    position: absolute;
+    bottom: 140px;
+    width: 100px;
+    height: 40px;
+    font-family: 'Inter', YuGothic, MS Gothic, Meiryo, serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    background: #789DFE;
+    border: 2px solid #000000;
+    border-radius: 10px;
+  }
+
+  .error {
+    margin-top: 30px;
+  }
+}
+
+.app {
+  width: 100vw;
+}
+
+.guest {
+  position: absolute;
+  display: inline-block;
+  width: 100vw;
+  top: 10px;
+  right: 10px;
+  text-align: right;
+
+  button {
+    color: blue;
+    font-size: 10px;
+    text-decoration: underline;
+  }
+}
