@@ -1,10 +1,13 @@
-# プロジェクト名
+# 欠課時数記録アプリ
 
 ## 動作URL
 
 ゲストログインで実際に使用してみることが可能です。基本的にスマートフォン用となっています。
 
 [https://krmm.work](https://krmm.work)
+
+## デザイン案
+[Figma](https://www.figma.com/file/FDXlNdULyNragSETCf4cpd/%E6%AC%A0%E8%AA%B2%E6%99%82%E6%95%B0%E7%AE%A1%E7%90%86app?node-id=4%3A115)で作成したデザイン
 
 ## 概要
 
