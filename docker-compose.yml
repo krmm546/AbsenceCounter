@@ -1,0 +1,27 @@
+version: '3.7'
+
+volumes:
+  db_data:
+
+services:
+  app:
+    image: gradle:jdk17-alpine
+    build:
+      context: .
+    depends_on:
+      - db
+    tty: true
+    ports:
+      - '4567:4567'
+    command: ["java", "-jar", "build/libs/AbsencesCounter-1.0-SNAPSHOT-all.jar"]
+  db:
+    image: mysql:8
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+    tty: true
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: absence
+      MYSQL_USER: jdbc_username
+      MYSQL_PASSWORD: jdbc_password
+      TZ: 'Asia/Tokyo'
